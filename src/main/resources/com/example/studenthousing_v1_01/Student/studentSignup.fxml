@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studenthousing_v1_01.Student.StudentSignupController">
+    <children>
+        <Label layoutX="229.0" layoutY="24.0" text="Student Signup Page">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font></Label>
+        <Button fx:id="btn_tologin" layoutX="172.0" layoutY="341.0" mnemonicParsing="false" text="Login" />
+        <Label layoutX="36.0" layoutY="345.0" text="already have an account" />
+        <Button fx:id="btn_continue" layoutX="301.0" layoutY="283.0" mnemonicParsing="false" text="continue" />
+        <Label layoutX="92.0" layoutY="80.0" text="First Name" />
+        <Label layoutX="327.0" layoutY="80.0" text="University name" />
+        <Label layoutX="332.0" layoutY="123.0" text="Address" />
+        <Label layoutX="95.0" layoutY="163.0" text="Username" />
+        <Label layoutX="95.0" layoutY="123.0" text="LastName" />
+        <Label layoutX="332.0" layoutY="211.0" text="Email" />
+        <Label layoutX="332.0" layoutY="163.0" text="Phon Number" />
+        <Label layoutX="97.0" layoutY="211.0" text="Password" />
+        <TextField fx:id="tf_fname" layoutX="163.0" layoutY="76.0" />
+        <TextField fx:id="tf_lname" layoutX="163.0" layoutY="119.0" />
+        <TextField fx:id="tf_email" layoutX="417.0" layoutY="207.0" />
+        <TextField fx:id="tf_address" layoutX="417.0" layoutY="119.0" />
+        <TextField fx:id="tf_number" layoutX="417.0" layoutY="159.0" />
+        <TextField fx:id="tf_uniname" layoutX="417.0" layoutY="76.0" />
+        <TextField fx:id="tf_username" layoutX="163.0" layoutY="159.0" />
+        <TextField fx:id="tf_password" layoutX="163.0" layoutY="207.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studenthousing_v1_01.Student.StudentLoginController">
+    <children>
+        <Label layoutX="217.0" layoutY="61.0" text="Student Login Page">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tf_username" layoutX="226.0" layoutY="146.0" />
+        <TextField fx:id="tf_password" layoutX="226.0" layoutY="213.0" />
+        <Label layoutX="274.0" layoutY="120.0" text="username" />
+        <Label layoutX="275.0" layoutY="183.0" text="password" />
+        <Button fx:id="btn_towelcome" layoutX="144.0" layoutY="282.0" mnemonicParsing="false" text="return to the welcome page" />
+        <Button fx:id="btn_continue" layoutX="337.0" layoutY="282.0" mnemonicParsing="false" text="continue" />
+        <Button fx:id="btn_tosignup" layoutX="71.0" layoutY="347.0" mnemonicParsing="false" text="sign up" />
+        <Label layoutX="36.0" layoutY="351.0" text="new :" />
+    </children>
+</AnchorPane>
