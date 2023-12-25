@@ -6,6 +6,7 @@
 package com.example.studenthousing_v1_01.MainPages;
 
 import com.example.studenthousing_v1_01.ApplicationSL;
+import com.example.studenthousing_v1_01.DbUtils;
 import com.example.studenthousing_v1_01.SessionManagment.SessionManager;
 import com.example.studenthousing_v1_01.SessionManagment.User;
 import java.io.IOException;
@@ -47,6 +48,7 @@ public class LandingPageController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.btn_logout.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
+                DbUtils.changeScene(event , "welcome.fxml" , "welcome" , null);
             }
         });
     }

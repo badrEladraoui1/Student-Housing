@@ -64,6 +64,11 @@ public class DbUtils {
                     String retrievedPassword = resultSet.getString("password");
                     if (retrievedPassword.equals(password)) {
                         changeScene(event, "MainPages/landingPage.fxml", "LandingPage", (String)null);
+                    }else{
+                        System.out.println("PASSWORD INCORRECT");
+                        Alert alert = new Alert(AlertType.ERROR);
+                        alert.setContentText("PROVIDED CREDENTIALS ARE INCORRECT");
+                        alert.show();
                     }
                 }
             }

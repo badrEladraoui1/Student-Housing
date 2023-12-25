@@ -8,6 +8,8 @@ package com.example.studenthousing_v1_01.Admin;
 import com.example.studenthousing_v1_01.ApplicationSL;
 import com.example.studenthousing_v1_01.SessionManagment.SessionManager;
 import com.example.studenthousing_v1_01.SessionManagment.User;
+
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -54,7 +56,12 @@ public class AdminProfileController {
     }
 
     @FXML
-    void change(ActionEvent event) {
+    void change() throws SQLException, IOException {
+        ApplicationSL applicationSL = new ApplicationSL();
+        setMainApp(mainApp);
+        SessionManager sessionManager = SessionManager.getInstance();
+        User current = sessionManager.getCurrentUser();
+        mainApp.showProfileEdit(current);
     }
 
     @FXML
@@ -64,8 +71,10 @@ public class AdminProfileController {
     }
 
     public void setUser(User u) throws SQLException {
+
         SessionManager sm = SessionManager.getInstance();
         this.user = sm.getCurrentUser();
+
         String selectQuery = "SELECT * FROM public.\"Admin\" WHERE username = ?";
         Connection cnx = null;
         PreparedStatement stm = null;

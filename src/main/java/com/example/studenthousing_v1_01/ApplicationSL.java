@@ -6,6 +6,7 @@
 package com.example.studenthousing_v1_01;
 
 import com.example.studenthousing_v1_01.Admin.AdminProfileController;
+import com.example.studenthousing_v1_01.Admin.EditAdminProfileController;
 import com.example.studenthousing_v1_01.SessionManagment.User;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -48,6 +49,24 @@ public class ApplicationSL extends Application {
         adminProfileStage.show();
         return adminProfileController.isOkClick();
     }
+
+    public boolean showProfileEdit(User user) throws IOException, SQLException {
+        FXMLLoader fxmlLoaderEditProfile = new FXMLLoader(ApplicationSL.class.getResource("Admin/editAdminProfile.fxml"));
+        AnchorPane rditProfile = (AnchorPane)fxmlLoaderEditProfile.load();
+        Stage adminEditProfileStage = new Stage();
+        adminEditProfileStage.setTitle("edit profile");
+        adminEditProfileStage.initModality(Modality.WINDOW_MODAL);
+        adminEditProfileStage.initOwner(stage);
+        Scene scene = new Scene(rditProfile);
+        adminEditProfileStage.setScene(scene);
+        EditAdminProfileController editAdminProfileController = (EditAdminProfileController)fxmlLoaderEditProfile.getController();
+        editAdminProfileController.setDialogStage(adminEditProfileStage);
+        editAdminProfileController.setUser(user);
+        editAdminProfileController.setMainApp(this);
+        adminEditProfileStage.show();
+        return editAdminProfileController.isOkClick();
+    }
+
 
     public static void main(String[] args) {
         launch(new String[0]);
